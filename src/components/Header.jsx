@@ -62,7 +62,7 @@ function Header() {
                                     <Button
                                         text={item.title}
                                         slug={item.slug}
-                                        className={`${window.location.pathname === item.slug ? "border-2 border-orange-400 shadow-md shadow-black" : "border-2 border-transparent shadow-sm shadow-black"}`}
+                                        className={`${window.location.pathname === item.slug ? "border-orange-400 shadow-md" : ""}`}
                                     />
                                 </NavLink>
                             </div>

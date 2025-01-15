@@ -1,4 +1,5 @@
 import React from "react"
+import { twMerge } from "tailwind-merge"
 
 function Button({
     type = "button",
@@ -13,7 +14,10 @@ function Button({
     return (
         <button
             type={type}
-            className={`rounded-xl px-4 py-2 font-semibold duration-200 hover:border-orange-400 hover:shadow-md hover:shadow-black active:shadow-none ${className} ${bgColor} ${textColor}`}
+            className={twMerge(
+                `rounded-xl border-2 border-transparent px-4 py-2 font-semibold shadow-sm shadow-black duration-200 hover:border-orange-400 hover:shadow-md hover:shadow-black active:shadow-none`,
+                `${className} ${bgColor} ${textColor}`,
+            )}
             {...props}
         >
             {text}
